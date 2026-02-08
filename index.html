@@ -1,80 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SotirisM | Developer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SotirisM Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://icons8.com/icon/VRzaBHVGDr36/bookmark"
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-  <!-- Navbar / Logo -->
+  <!-- Navbar -->
   <nav>
     <div class="logo" onclick="goHome()">SotirisM <i class="fas fa-terminal"></i></div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero" id="hero">
+  <section class="hero">
     <div class="hero-content">
       <div class="hero-text">
-        <h1>Hi, I'm SotirisM</h1>
-        <p class="motto">Crafting clean, modern, and progressive web experiences</p>
-        <a href="#hero" class="btn">Scroll to top</a>
+        <h1>Hello, I'm Sotiris</h1>
+        <p class="motto">Creating modern, interactive web experiences</p>
+        <a href="#pricing" class="btn">See Pricing</a>
       </div>
       <div class="hero-image">
-        <img src="images/tech.jpg" alt="SotirisM Profile">
+        <img src="images/tech.jpg" alt="Tech Image">
       </div>
     </div>
-  </header>
+  </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a web developer passionate about modern design and creating smooth user experiences.</p>
+  <!-- Pricing Section -->
+  <section id="pricing">
+    <h2>Pricing</h2>
+    <div class="pricing-container">
+      <div class="pricing-card">
+        <h3>Basic</h3>
+        <p class="price">€100</p>
+        <ul>
+          <li>1 Simple Web Page</li>
+          <li>Responsive Design</li>
+          <li>Email Support</li>
+        </ul>
+        <a href="#" class="btn">Choose Plan</a>
+      </div>
+      <div class="pricing-card featured">
+        <h3>Standard</h3>
+        <p class="price">€250</p>
+        <ul>
+          <li>Up to 5 Pages</li>
+          <li>Responsive + Animations</li>
+          <li>2 Months Support</li>
+        </ul>
+        <a href="#" class="btn">Choose Plan</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Premium</h3>
+        <p class="price">€500</p>
+        <ul>
+          <li>Unlimited Pages</li>
+          <li>Advanced Animations</li>
+          <li>6 Months Support</li>
+        </ul>
+        <a href="#" class="btn">Choose Plan</a>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>© 2026 SotirisM</p>
+    &copy; 2026 SotirisM. All rights reserved.
   </footer>
-  <!-- Pricing Section -->
-<section id="pricing">
-  <h2>Pricing</h2>
-  <div class="pricing-container">
-    <div class="pricing-card">
-      <h3>Basic</h3>
-      <p class="price">€100</p>
-      <ul>
-        <li>1 Simple Web Page</li>
-        <li>Responsive Design</li>
-        <li>Email Support</li>
-      </ul>
-      <a href="#" class="btn">Choose Plan</a>
-    </div>
-    <div class="pricing-card featured">
-      <h3>Standard</h3>
-      <p class="price">€250</p>
-      <ul>
-        <li>Up to 5 Pages</li>
-        <li>Responsive + Animations</li>
-        <li>2 Months Support</li>
-      </ul>
-      <a href="#" class="btn">Choose Plan</a>
-    </div>
-    <div class="pricing-card">
-      <h3>Premium</h3>
-      <p class="price">€500</p>
-      <ul>
-        <li>Unlimited Pages</li>
-        <li>Advanced Animations</li>
-        <li>6 Months Support</li>
-      </ul>
-      <a href="#" class="btn">Choose Plan</a>
-    </div>
-  </div>
-</section>
 
-
-  <script src="script.js"></script>
 </body>
 </html>
