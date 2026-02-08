@@ -1,14 +1,19 @@
-const sections = document.querySelectorAll("section");
+// Όταν πατάς το logo πάει στην κορυφή
+function goHome() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
-window.addEventListener("scroll", () => {
-  sections.forEach(section => {
-    const top = section.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100) {
-      section.style.opacity = 1;
-      section.style.transform = "translateY(0)";
-    } else {
-      section.style.opacity = 0;
-      section.style.transform = "translateY(50px)";
-    }
-  });
+// Animation on page load
+window.addEventListener('load', () => {
+  const heroText = document.querySelector('.hero-text');
+  const heroImage = document.querySelector('.hero-image img');
+
+  // Προσθέτει την κλάση show με μικρή καθυστέρηση
+  setTimeout(() => {
+    heroText.classList.add('show');
+  }, 200);
+
+  setTimeout(() => {
+    heroImage.classList.add('show');
+  }, 400);
 });
