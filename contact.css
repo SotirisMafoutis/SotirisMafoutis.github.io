@@ -151,6 +151,9 @@
         flex-direction: column;
         align-items: center;
     }
+    .info-item div h4, .info-item div p {
+    margin: 0; /* Αφαιρεί τυχόν κρυφά κενά που χαλάνε την ευθεία */
+    }
 
     .contact-form-card {
         padding: 25px 20px; /* Λιγότερο εσωτερικό κενό για να κερδίσουμε χώρο */
