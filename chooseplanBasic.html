@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Sotiris M</title>
+    <link rel="icon" type="image/png" href="images/Sotiris_logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chooseplanBasic.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo" onclick="window.location.href='index.html'">
+            Sotiris<span>M</span> <i class="fas fa-code"></i>
+        </div>
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="chooseplan.html" class="active">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section class="order-container">
+        <div class="container">
+            <header class="order-header">
+                <h1>Start Your <span>Project</span></h1>
+                <p>Συμπληρώστε τη φόρμα και θα επικοινωνήσω μαζί σας εντός 24 ωρών.</p>
+            </header>
+
+            <form id="order-form" action="https://formspree.io/f/sotiris.mafoutis@gmail.com" method="POST">
+                <div class="order-wrapper">
+                    
+                    <div class="plan-summary">
+                        <div class="card-content highlight">
+                            <input type="hidden" name="Selected Plan" value="Basic $100">
+                            <div class="popular-tag">Starter Choice</div>
+                            <i class="fas fa-bolt"></i>
+                            <h3>Basic Plan</h3>
+                            <span class="card-price">100€</span>
+                            <ul class="card-features">
+                                <li><i class="fas fa-check"></i> 1 Landing Page</li>
+                                <li><i class="fas fa-check"></i> Mobile Optimized</li>
+                                <li><i class="fas fa-check"></i> 48h Delivery</li>
+                                <li><i class="fas fa-check"></i> Basic SEO Setup</li>
+                                <li><i class="fas fa-check"></i> Clean Code</li>
+                                <li><i class="fas fa-check"></i>3 Months Support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="details-form">
+                        <div class="input-group">
+                            <label><i class="fas fa-user"></i> Ονοματεπώνυμο</label>
+                            <input type="text" name="name" placeholder="π.χ. Γιώργος Παπαδόπουλος" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label><i class="fas fa-envelope"></i> Email</label>
+                                <input type="email" name="_replyto" placeholder="example@mail.com" required>
+                            </div>
+                            <div class="input-group">
+                                <label><i class="fas fa-phone"></i> Τηλέφωνο</label>
+                                <input type="tel" name="phone" placeholder="6912345678" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label><i class="fas fa-comment-alt"></i> Λεπτομέρειες Project</label>
+                            <textarea name="message" placeholder="Περιγράψτε τι είδους ιστοσελίδα χρειάζεστε..." rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="order-btn" id="submit-btn">
+                            Submit Order <i class="fas fa-paper-plane"></i>
+                        </button>
+
+                        <div id="form-status"></div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    
+    <script src="scriptPlan.js"></script>
+
+</body>
+</html>
