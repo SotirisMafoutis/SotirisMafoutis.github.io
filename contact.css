@@ -121,7 +121,7 @@
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .contact-wrapper {
         grid-template-columns: 1fr;
         text-align: center;

@@ -230,6 +230,32 @@ footer {
 
 /* Mobile Fixes */
 @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hero h1 { font-size: 2.8rem; }
+    /* 1. Τα κείμενα μικραίνουν λίγο για να μην πιάνουν όλη την οθόνη */
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    /* 2. Τα sections που είναι δίπλα-δίπλα (grid/flex), γίνονται το ένα κάτω από το άλλο */
+    .hero-content, .contact-wrapper, .pricing-container {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    /* 3. Φτιάξε τα περιθώρια (padding) */
+    section {
+        padding: 60px 20px !important;
+    }
+
+    /* 4. Οι εικόνες να μην ξεφεύγουν */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .nav-links {
+        display: none; /* Ή φτιάξε ένα hamburger menu αν ξέρεις JS */
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
 }
