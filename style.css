@@ -103,10 +103,10 @@ nav {
     line-height: 1.1;
     margin-bottom: 20px;
 }
-
 .gradient-text {
     background: linear-gradient(90deg, #38bdf8, #818cf8);
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; /* Για Chrome, Safari, Edge */
+    background-clip: text;         /* Η standard ιδιότητα που σου ζητάει το VS Code */
     -webkit-text-fill-color: transparent;
 }
 
