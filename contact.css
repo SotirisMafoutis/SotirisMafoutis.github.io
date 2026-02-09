@@ -122,6 +122,31 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block !important;
+        position: relative;
+        z-index: 99999 !important; 
+        pointer-events: auto !important;
+        cursor: pointer;
+        color: white; /* Σιγουρέψου ότι φαίνεται πάνω στο background */
+    }
+
+    /* Και εδώ οι οδηγίες για το πώς θα ανοίγει το μενού */
+    .nav-links {
+        display: flex !important;
+        position: fixed;
+        right: -100%; /* Ξεκινάει κρυμμένο δεξιά */
+        top: 0;
+        width: 70%;
+        height: 100vh;
+        background: #0f172a;
+        transition: 0.4s;
+        z-index: 99998; /* Λίγο πιο κάτω από το κουμπί */
+    }
+
+    .nav-links.active {
+        right: 0; /* Εμφανίζεται όταν πατάς το κουμπί */
+    }
     .contact-hero {
         padding: 100px 5% 40px; /* Μειώνουμε τα περιθώρια πάνω-κάτω */
         height: auto; /* Επιτρέπουμε στη σελίδα να μεγαλώσει σε ύψος */
@@ -171,4 +196,5 @@
     .input-group textarea {
         font-size: 16px; /* Αποφεύγει το αυτόματο ζουμ του iPhone */
     }
+    
 }
