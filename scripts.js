@@ -32,3 +32,21 @@ document.querySelectorAll('.pricing-card').forEach(card => {
 function goHome() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+const mobileMenu = document.getElementById('mobile-menu');
+const navMenu = document.getElementById('nav-menu');
+
+mobileMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    
+    // Προαιρετικό: Αλλάζει το εικονίδιο από "γραμμές" σε "X"
+    const icon = mobileMenu.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-times');
+});
+
+// Κλείνει το μενού αυτόματα όταν πατάς ένα link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});

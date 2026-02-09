@@ -227,7 +227,12 @@ footer {
     border-top: 1px solid var(--border);
     color: #64748b;
 }
-
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary);
+}
 /* Mobile Fixes */
 @media (max-width: 768px) {
     /* 1. Τα κείμενα μικραίνουν λίγο για να μην πιάνουν όλη την οθόνη */
@@ -258,4 +263,33 @@ footer {
     .logo {
         font-size: 1.2rem;
     }
+    .menu-toggle {
+        display: block; /* Εμφανίζεται μόνο στο κινητό */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px; /* Κάτω από το navbar */
+        right: -100%; /* Κρυμμένο έξω από την οθόνη δεξιά */
+        flex-direction: column;
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    /* Όταν πατάμε το κουμπί, το μενού έρχεται στο κέντρο */
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+
+
 }
