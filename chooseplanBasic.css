@@ -1,6 +1,7 @@
 /* --- Γενικές Ρυθμίσεις Σελίδας --- */
 .order-container {
     padding: 120px 20px 60px;
+    padding-top: 100px;
     background: radial-gradient(circle at top, #0f172a 0%, #020617 100%);
     min-height: 100vh;
     color: white;
@@ -237,18 +238,25 @@
         width: 100%;
     }
 
-    .order-header h1 {
-        font-size: 2.2rem;
+  .order-header h1 {
+        font-size: 2rem;    /* Μικραίνει το μέγεθος για να μην "σπάει" σε πολλές γραμμές */
+        padding: 0 15px;    /* Δίνει λίγο αέρα δεξιά-αριστερά */
     }
-}
+.order-header p {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+.order-header {
+        margin-top: 30px;
+    }
 
-@media (max-width: 600px) {
     .form-row {
         grid-template-columns: 1fr; /* Email & Τηλέφωνο κάθετα στο κινητό */
     }
     
     .order-container {
-        padding: 100px 15px 40px;
+        padding-top: 120px; /* Δίνει χώρο για να μην κρύβεται πίσω από το μενού */
+        min-height: auto;
     }
 
     .details-form {
