@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | SotirisM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="contact.css"> </head>
+<body>
+
+    <nav>
+        <div class="logo" onclick="window.location.href='index.html'">
+            Sotiris<span>M</span> <i class="fas fa-code"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="contact-wrapper">
+                
+                <div class="contact-info">
+                    <span class="badge">Get in touch</span>
+                    <h1>Let's build something <span class="gradient-text">epic</span>.</h1>
+                    <p>Έχεις μια ιδέα; Ας την κάνουμε πραγματικότητα. Στείλε μου ένα μήνυμα και θα σου απαντήσω εντός 24 ωρών.</p>
+                    
+                    <div class="info-items">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>sotiris@example.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-location-dot"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Athens, Greece</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-card">
+                    <form action="https://formspree.io/f/YOUR_ID" method="POST">
+                        <div class="input-group">
+                            <label>Ονοματεπώνυμο</label>
+                            <input type="text" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Το μήνυμά σου</label>
+                            <textarea name="message" rows="5" placeholder="Πώς μπορώ να βοηθήσω;" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary full-width">Αποστολή Μηνύματος</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 SotirisM. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
