@@ -1,3 +1,22 @@
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- ΑΥΤΟ ΕΙΝΑΙ ΓΙΑ ΤΟ ΜΕΝΟΥ (Πρέπει να υπάρχει και εδώ) ---
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (mobileMenu && navMenu) {
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileMenu.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        });
+    }
+
 const form = document.getElementById("my-form");
 const status = document.getElementById("form-status");
 const btn = document.getElementById("submit-btn");
@@ -40,3 +59,7 @@ async function handleSubmit(event) {
 }
 
 form.addEventListener("submit", handleSubmit);
+});
+function goHome() {
+    window.location.href = 'index.html';
+}
