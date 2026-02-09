@@ -33,7 +33,7 @@ nav {
     backdrop-filter: blur(12px);
     position: fixed;
     width: 100%;
-    z-index: 1000;
+    z-index: 1000 !important;
     border-bottom: 1px solid var(--border);
 }
 
@@ -229,6 +229,9 @@ footer {
 }
 .menu-toggle {
     display: none;
+    position: relative;
+    z-index: 1001;
+    padding: 10px;
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--primary);
@@ -268,7 +271,9 @@ footer {
     }
 
     .nav-links {
+        display:flex;
         position: absolute;
+        z-index: 999;
         top: 70px; /* Κάτω από το navbar */
         right: -100%; /* Κρυμμένο έξω από την οθόνη δεξιά */
         flex-direction: column;
