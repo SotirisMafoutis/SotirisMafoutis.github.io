@@ -122,20 +122,50 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-        text-align: center;
+    .contact-hero {
+        padding: 100px 5% 40px; /* Μειώνουμε τα περιθώρια πάνω-κάτω */
+        height: auto; /* Επιτρέπουμε στη σελίδα να μεγαλώσει σε ύψος */
+        min-height: 100vh;
     }
-    
-    .info-item {
-        justify-content: center;
+
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* Από 2 στήλες, γίνεται 1 */
+        gap: 40px;
+        text-align: center;
     }
 
     .contact-info h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Μικραίνουμε τον τίτλο για να χωράει */
     }
-    
+
+    .info-item {
+        flex-direction: column; /* Εικονίδιο πάνω, κείμενο από κάτω */
+        gap: 10px;
+    }
+
+    .info-item i {
+        margin: 10px auto; /* Κεντράρουμε το εικονίδιο */
+    }
+    .info-item div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form-card {
+        padding: 25px 20px; /* Λιγότερο εσωτερικό κενό για να κερδίσουμε χώρο */
+        width: 100%;
+        backdrop-filter: blur(10px); /* Διατηρούμε το glass εφέ */
+    }
+
     .social-links {
-        justify-content: center;
+        justify-content: center; /* Κεντράρουμε τα social icons */
+        margin-bottom: 20px;
+    }
+
+    /* Κάνουμε τα inputs λίγο μεγαλύτερα για να πατιούνται εύκολα με το δάχτυλο */
+    .input-group input, 
+    .input-group textarea {
+        font-size: 16px; /* Αποφεύγει το αυτόματο ζουμ του iPhone */
     }
 }
