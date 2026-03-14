@@ -44,6 +44,31 @@ nav {
 }
 
 .logo span { color: var(--primary); }
+.logo-btn {
+    cursor: pointer; /* Κάνει το ποντίκι να φαίνεται σαν χέρι */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none; /* Δεν επιτρέπει το τυχαίο μαρκάρισμα του κειμένου */
+}
+
+.logo-btn:hover {
+    transform: scale(1.05); /* Μεγαλώνει ελάχιστα */
+    filter: drop-shadow(0 0 8px var(--primary)); /* Προσθέτει μια μικρή λάμψη */
+}
+
+.logo-btn:active {
+    transform: scale(0.95); /* Μικραίνει λίγο όταν το πατάς (click effect) */
+}
+
+.logo-btn i {
+    transition: transform 0.4s ease;
+}
+
+.logo-btn:hover i {
+    transform: rotate(20deg); /* Το εικονίδιο </> στρίβει λίγο στο hover */
+}
 
 .nav-links {
     list-style: none;
@@ -206,8 +231,83 @@ nav {
 }
 
 .btn.secondary {
-    border: 1px solid var(--border);
-    color: white;
+    background: var(--primary);
+    color: var(--dark);
+    box-shadow: 0 4px 15px var(--primary-glow);
+    }
+
+/* Scroll Indicator Style */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.scroll-indicator:hover {
+    opacity: 0.7;
+}
+
+.scroll-indicator span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* Το "Ποντίκι" */
+.mouse {
+    width: 25px;
+    height: 40px;
+    border: 2px solid #ffffff44;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 2px;
+    animation: scroll-wheel 1.5s infinite;
+}
+
+/* Το Βελάκι */
+.arrow span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid var(--primary);
+    border-right: 2px solid var(--primary);
+    transform: rotate(45deg);
+    margin: -5px;
+    animation: arrow-down 1.5s infinite;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+/* Animations */
+@keyframes scroll-wheel {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0; }
+}
+
+@keyframes arrow-down {
+    0% { opacity: 0; transform: rotate(45deg) translate(-5px, -5px); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: rotate(45deg) translate(5px, 5px); }
 }
 
 .btn-card {
@@ -297,6 +397,8 @@ footer {
         margin: 20px 0;
         text-align: center;
     }
+
+    
 
 
 

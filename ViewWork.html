@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sotiris M | My Work</title>
+    <link rel="icon" type="image/png" href="images/Sotiris_logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="viewwork.css"> </head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <section class="hero work-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="badge">Portfolio</span>
+                <h1>My Recent <span class="gradient-text">Work</span></h1>
+                <p class="motto">Εξερευνήστε τα projects που έχω δημιουργήσει, με έμφαση στην απόδοση και το modern UI.</p>
+            </div>
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('my-work').scrollIntoView({behavior: 'smooth'})">
+    <span>Explore</span>
+    <div class="mouse">
+        <div class="wheel"></div>
+    </div>
+    <div class="arrow">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+    </section>
+
+    <section class="projects-section" id="my-work">
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="images/underConstruction.jpg" alt="Project 1">
+                    <div class="project-hover-overlay">
+                        <span class="view-link">View Live <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-tags">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>Responsive</span>
+                        <span>Design</span>
+                    </div>
+                    <h3>E-Commerce Interface</h3>
+                    <p>Σχεδιασμός ενός ταχύτατου ηλεκτρονικού καταστήματος.</p>
+                    <a href="ViewWork.html" class="btn-project">Open Demo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="images/underConstruction.jpg" alt="Project 2">
+                    <div class="project-hover-overlay">
+                        <span class="view-link">View Live <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <div class="project-tags">
+                         <span>HTML/CSS</span>
+                         <span>JavaScript</span>
+                         <span>Responsive</span>
+                         <span>Design</span>
+                    </div>
+                    <h3>Business Landing Page</h3>
+                    <p>Μινιμαλιστική σελίδα για εταιρική παρουσίαση.</p>
+                    <a href="ViewWork.html" class="btn-project">Open Demo</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

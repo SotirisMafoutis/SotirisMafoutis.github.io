@@ -11,19 +11,7 @@
 
 <body>
 
-    <nav>
-        <div class="logo" onclick="goHome()">
-            Sotiris<span>M</span> <i class="fas fa-code"></i>
-        </div>
-         <ul class="nav-links" id="nav-menu">
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="contact.html" class="btn-nav">Contact</a></li>
-        </ul>
-        <div class="menu-toggle" id="mobile-menu">
-        <i class="fas fa-bars"></i>
-    </div>
-    </nav>
-
+    <div id="header-placeholder"></div>
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -33,10 +21,20 @@
                 <p class="motto">Modern, fast, and interactive experiences tailored to your brand.</p>
                 <div class="hero-btns">
                     <a href="#pricing" class="btn primary">Start a Project</a>
-                    <a href="#" class="btn secondary">View Work</a>
+                    <a href="ViewWork.html" class="btn secondary">View Work</a>
                 </div>
             </div>
         </div>
+        <div class="scroll-indicator" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">
+    <span>Explore</span>
+    <div class="mouse">
+        <div class="wheel"></div>
+    </div>
+    <div class="arrow">
+        <span></span>
+        <span></span>
+    </div>
+</div>
     </section>
 
     <section id="pricing">
@@ -81,9 +79,7 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 SotirisM. Developed with passion.</p>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <script src="scripts.js"></script>
 </body>
