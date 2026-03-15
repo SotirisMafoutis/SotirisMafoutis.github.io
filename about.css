@@ -1,0 +1,125 @@
+/* about.css */
+
+.about-hero {
+    min-height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    z-index: 2;
+    max-width: 1100px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+}
+
+/* Εφέ για την εικόνα */
+.about-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-border-glow {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    border-radius: 20px;
+    padding: 10px;
+    background: linear-gradient(135deg, var(--primary), #818cf8);
+    box-shadow: 0 0 30px var(--primary-glow);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+
+/* Περιεχόμενο */
+.about-content p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;           /* Κόβει τις λέξεις με παύλα αν χρειαστεί */
+    max-width: 800px;        /* Κρατάει το κείμενο σε μια ευανάγνωστη περιοχή */
+    margin: 0 auto;          /* Το κεντράρει αν είναι μόνο του */
+    line-height: 1.8;
+    color: #cbd5e1;          /* Το χρώμα που ήδη χρησιμοποιείς */
+}
+
+.about-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #94a3b8;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Skills icons */
+.skills-mini {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-item i {
+    color: var(--primary);
+}
+
+.about-btns {
+    display: flex;
+    gap: 20px;
+}
+
+/* Responsive για κινητά */
+@media (max-width: 968px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        margin: 20px;
+        padding: 30px 20px;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .skills-mini {
+        justify-content: center;
+    }
+
+    .about-btns {
+        justify-content: center;
+    }
+
+    .image-border-glow {
+        width: 250px;
+        height: 300px;
+    }
+}

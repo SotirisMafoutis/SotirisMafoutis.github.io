@@ -336,6 +336,31 @@ footer {
     cursor: pointer;
     color: var(--primary);
 }
+.cursor-follower {
+    width: 25px;
+    height: 25px;
+    background: rgba(56, 189, 248, 0.2);
+    border: 2px solid #38bdf8;
+    border-radius: 50%;
+    position: fixed; /* Σταθερό ως προς την οθόνη */
+    pointer-events: none; /* Να μην "πιάνει" το ποντίκι τον εαυτό του */
+    z-index: 9999999; /* Πάνω από ΟΛΑ */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    /* Αφαιρούμε το transform από εδώ για να μην μπερδεύεται το JS */
+}
+
+/* Όταν είμαστε μέσα στο container */
+.in-about-container .cursor-follower {
+    opacity: 1;
+}
+
+/* Απόκρυψη κανονικού κέρσορα */
+.about-container, .about-container * {
+    cursor: none !important;
+}
+
+
 /* Mobile Fixes */
 @media (max-width: 768px) {
     /* 1. Τα κείμενα μικραίνουν λίγο για να μην πιάνουν όλη την οθόνη */

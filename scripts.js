@@ -111,3 +111,28 @@ function goHome() {
         window.location.href = "index.html";
     }
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const follower = document.querySelector('.cursor-follower');
+    const container = document.querySelector('.about-container');
+
+    if (!follower || !container) {
+        console.error("Κάτι λείπει! Follower:", follower, "Container:", container);
+        return;
+    }
+
+    // Κίνηση κέρσορα
+    window.addEventListener('mousemove', (e) => {
+        // Χρησιμοποιούμε e.clientX/Y για να αγνοήσουμε το scroll
+        follower.style.left = e.clientX - 25 + 'px'; // 25 είναι το μισό του width (50/2)
+        follower.style.top = e.clientY - 25 + 'px';
+    });
+
+    // Hover Logic
+    container.addEventListener('mouseenter', () => {
+        document.body.classList.add('in-about-container');
+    });
+
+    container.addEventListener('mouseleave', () => {
+        document.body.classList.remove('in-about-container');
+    });
+});
