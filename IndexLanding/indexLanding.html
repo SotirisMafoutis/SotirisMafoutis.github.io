@@ -81,26 +81,27 @@
                     <h2 class="section-title-center">Επικοινωνία</h2>
                     <p class="contact-subtitle">Συμπληρώστε τη φόρμα και ένας εκπρόσωπός μας θα επικοινωνήσει μαζί σας άμεσα.</p>
                     
-                    <form class="biz-form" action="https://formspree.io/f/xdalkzad" method="POST">
+                    <form class="biz-form" id="my-form2" action="https://formspree.io/f/xdalkzad" method="POST">
                         <div class="form-row">
                             <div class="input-group">
-                                <input type="text" id="fullname" placeholder=" " required>
+                                <input type="text" id="fullname"  name="fullname" placeholder=" " required>
                                 <label for="fullname">Ονοματεπώνυμο</label>
                             </div>
                             <div class="input-group">
-                                <input type="email" id="email" placeholder=" " required>
+                                <input type="email" id="email"  name="email" placeholder=" " required>
                                 <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="input-group">
-                            <input type="text" id="subject" placeholder=" " required>
+                            <input type="text" id="subject" name="subject" placeholder=" " required>
                             <label for="subject">Θέμα</label>
                         </div>
                         <div class="input-group">
-                            <textarea id="message" rows="5" placeholder=" " required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
                             <label for="message">Το μήνυμά σας...</label>
                         </div>
-                        <button type="submit" class="btn-primary form-submit-btn">Αποστολή Μηνύματος</button>
+                        <p id="form-status" style="display:none; margin-top:1rem; text-align:center;"></p>
+                        <button type="submit" id="submit-btn" class="btn-primary form-submit-btn">Αποστολή Μηνύματος</button>
                     </form>
                 </div>
             </div>
@@ -109,6 +110,7 @@
 
     <div id="footer-placeholder"></div>
 
+    
     <script src="scriptLanding.js"></script>
 </body>
 </html>
