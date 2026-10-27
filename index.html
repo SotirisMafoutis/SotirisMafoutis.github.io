@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sotiris Mafoutis | Web Developer Portfolio</title>
-    <link rel="icon" type="image/png" href="images\Sotiris_logo.jpg">
+    <title>Sotiris Mafoutis | Premium Web Development</title>
+    <link rel="icon" type="image/png" href="images/Sotiris_logo.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,70 +12,125 @@
 <body>
 
     <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-text">
-                <span class="badge">Available for projects</span>
-                <h1>Building the <span class="gradient-text">Future</span> of Web</h1>
-                <p class="motto">Modern, fast, and interactive experiences tailored to your brand.</p>
+                <span class="badge">Available for new projects</span>
+                <h1>Elevating Brands with High-End <span class="gradient-text">Web Solutions</span></h1>
+                <p class="motto">I engineer fast, secure, and visually stunning websites that drive results, build trust, and scale with your business.</p>
                 <div class="hero-btns">
-                    <a href="#pricing" class="btn primary">Start a Project</a>
-                    <a href="ViewWork.html" class="btn secondary">View Work</a>
+                    <a href="#pricing" class="btn primary">View Investments</a>
+                    <a href="ViewWork.html" class="btn secondary">Explore My Work</a>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">
-    <span>Explore</span>
-    <div class="mouse">
-        <div class="wheel"></div>
-    </div>
-    <div class="arrow">
-        <span></span>
-        <span></span>
-    </div>
-</div>
+        <div class="scroll-indicator" onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">
+            <span>Discover</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </section>
 
+    <!-- Value Proposition / Trust Section -->
+    <section id="features" class="features-section">
+        <div class="section-header">
+            <h2>Why Partner With Me?</h2>
+            <p>Delivering digital excellence without compromises.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Lightning Fast</h3>
+                <p>Built with modern architectures to ensure instant load times and flawless user experiences across all devices.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-pen-nib"></i>
+                <h3>Bespoke Design</h3>
+                <p>No generic templates. Every pixel is crafted to match your brand's unique identity and business goals.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure & Scalable</h3>
+                <p>Following industry best practices for security and SEO, ensuring your site grows alongside your business.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
     <section id="pricing">
         <div class="section-header">
-            <h2>Our Plans</h2>
-            <p>Transparent pricing for every scale.</p>
+            <h2>Transparent Investment</h2>
+            <p>Scalable solutions tailored to your digital ambitions.</p>
         </div>
         <div class="pricing-container">
+            
+            <!-- Basic Plan -->
             <div class="pricing-card">
-                <h3>Basic</h3>
-                <div class="price">€100</div>
+                <h3>Starter</h3>
+                <p class="card-desc">Perfect for personal brands and small portfolios.</p>
+                <div class="price-wrapper">
+                    <span class="price-prefix">from</span>
+                    <div class="price">€200</div>
+                </div>
                 <ul>
-                    <li><i class="fas fa-check"></i> 1 Simple Page</li>
-                    <li><i class="fas fa-check"></i> Responsive Design</li>
-                    <li><i class="fas fa-check"></i> 1 Month Support</li>
+                    <li><i class="fas fa-check"></i> 1-2 Custom Pages</li>
+                    <li><i class="fas fa-check"></i> Fully Responsive Design</li>
+                    <li><i class="fas fa-check"></i> Basic SEO Setup</li>
+                    <li><i class="fas fa-check"></i> Speed Optimization</li>
+                    <li><i class="fas fa-check"></i> 1 Month Tech Support</li>
                 </ul>
-                <a href="chooseplanBasic.html" class="btn-card">Choose Plan</a>
+                <a href="chooseplanBasic.html" class="btn-card">Get Started</a>
             </div>
 
+            <!-- Standard Plan (Featured) -->
             <div class="pricing-card featured">
                 <div class="popular-tag">Most Popular</div>
-                <h3>Standard</h3>
-                <div class="price">€250</div>
+                <h3>Professional</h3>
+                <p class="card-desc">Ideal for growing businesses needing a strong presence.</p>
+                <div class="price-wrapper">
+                    <span class="price-prefix">from</span>
+                    <div class="price">€500</div>
+                </div>
                 <ul>
-                    <li><i class="fas fa-check"></i> Up to 5 Pages</li>
-                    <li><i class="fas fa-check"></i> Custom Animations</li>
-                    <li><i class="fas fa-check"></i> 3 Months Support</li>
+                    <li><i class="fas fa-check"></i> Up to 5 Custom Pages</li>
+                    <li><i class="fas fa-check"></i> Premium UI & Animations</li>
+                    <li><i class="fas fa-check"></i> <strong>Contact Form Integration</strong></li>
+                    <li><i class="fas fa-check"></i> Standard SEO Strategy</li>
+                    <li><i class="fas fa-check"></i> 3 Months Tech Support</li>
                 </ul>
-                <a href="chooseplanStandard.html" class="btn-card">Choose Plan</a>
+                <a href="chooseplanStandard.html" class="btn-card primary-btn-card">Choose Professional</a>
             </div>
 
+            <!-- Premium Plan -->
             <div class="pricing-card">
-                <h3>Premium</h3>
-                <div class="price">€500</div>
+                <h3>Enterprise</h3>
+                <p class="card-desc">For ambitious brands requiring ultimate performance.</p>
+                <div class="price-wrapper">
+                    <span class="price-prefix">from</span>
+                    <div class="price">€800</div>
+                </div>
                 <ul>
-                    <li><i class="fas fa-check"></i> Unlimited Pages</li>
-                    <li><i class="fas fa-check"></i> Full SEO Strategy</li>
-                    <li><i class="fas fa-check"></i> Priority Support</li>
+                    <li><i class="fas fa-check"></i> Unlimited/Dynamic Pages</li>
+                    <li><i class="fas fa-check"></i> <strong>Advanced Forms & APIs</strong></li>
+                    <li><i class="fas fa-check"></i> Advanced Analytics Setup</li>
+                    <li><i class="fas fa-check"></i> Full SEO & Performance Audit</li>
+                    <li><i class="fas fa-check"></i> Priority VIP Support</li>
                 </ul>
-                <a href="chooseplanPremium.html" class="btn-card">Choose Plan</a>
+                <a href="chooseplanPremium.html" class="btn-card">Let's Talk</a>
             </div>
+
+        </div>
+        
+        <div class="pricing-footer">
+            <p>Need something specific? <a href="contact.html">Request a custom quote.</a></p>
         </div>
     </section>
 
