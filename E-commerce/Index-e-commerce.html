@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NŌVA — Premium Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style-e-commerce.css">
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Νέα Συλλογή — SS 2026</div>
+    <h1>The Art of<br><em>Refined</em><br>Living</h1>
+    <p class="hero-desc">Αντικείμενα που αντέχουν στον χρόνο. Σχεδιασμένα για όσους εκτιμούν την τελειότητα σε κάθε λεπτομέρεια.</p>
+    <div class="hero-actions">
+      <button class="btn-gold" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Εξερεύνηση</button>
+      <button class="btn-outline">Lookbook ↗</button>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-grid">
+      <div class="hero-img-cell c1">
+        <div class="hero-product-mock"><div class="mock-shape"></div><div class="mock-label">Signature</div></div>
+      </div>
+      <div class="hero-img-cell c2">
+        <div class="hero-product-mock"><div class="mock-shape"></div><div class="mock-label">Artisan</div></div>
+      </div>
+      <div class="hero-img-cell c3">
+        <div class="hero-product-mock"><div class="mock-shape"></div><div class="mock-label">Limited</div></div>
+      </div>
+      <div class="hero-img-cell c4">
+        <div class="hero-product-mock"><div class="mock-shape"></div><div class="mock-label">Archive</div></div>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="hero-badge-num">247</div>
+      <div class="hero-badge-text">Exclusive Pieces</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="marquee-dot"></span>Free Shipping Over €150</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>New Collection SS 2026</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Handcrafted in Europe</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Exclusive Members Sale</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Sustainable Materials</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Free Returns 30 Days</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Free Shipping Over €150</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>New Collection SS 2026</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Handcrafted in Europe</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Exclusive Members Sale</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Sustainable Materials</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Free Returns 30 Days</span>
+  </div>
+</div>
+
+<!-- FILTER + PRODUCTS -->
+<section id="products" class="filter-section">
+  <div class="filter-header">
+    <h2 class="filter-title">Νέες <em>Αφίξεις</em></h2>
+    <div class="filter-controls">
+      <div class="filter-tabs">
+        <button class="filter-tab active" onclick="filterProducts('all',this)">Όλα</button>
+        <button class="filter-tab" onclick="filterProducts('accessories',this)">Accessories</button>
+        <button class="filter-tab" onclick="filterProducts('home',this)">Home</button>
+        <button class="filter-tab" onclick="filterProducts('fashion',this)">Fashion</button>
+      </div>
+      <select class="sort-select" onchange="sortProducts(this.value)">
+        <option>Νεότερα</option>
+        <option>Τιμή: Χαμηλή–Υψηλή</option>
+        <option>Τιμή: Υψηλή–Χαμηλή</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+<div class="products-grid" id="products-grid">
+
+  <div class="product-card p1 fade-in" data-cat="fashion" data-price="320">
+    <div class="product-img-wrap">
+      <img src="images/product1.jpg" alt="Aura Oversized Coat">
+      <span class="product-badge new">New</span>
+      <div class="product-overlay">
+        <button class="overlay-btn" onclick="addToCart(0)">Add to Cart</button>
+        <button class="overlay-btn wish" onclick="toggleWish(this)">♡</button>
+      </div>
+    </div>
+    <div class="product-info">
+      <div class="product-cat">Fashion</div>
+      <div class="product-name">Aura Oversized Coat</div>
+      <div class="product-footer">
+        <div><span class="product-price">€320</span></div>
+        <div class="product-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star empty"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card p2 fade-in" data-cat="accessories" data-price="185">
+    <div class="product-img-wrap">
+      <img src="images/product2.jpg" alt="Cobalt Mini Bag">
+      <span class="product-badge">Bestseller</span>
+      <div class="product-overlay">
+        <button class="overlay-btn" onclick="addToCart(1)">Add to Cart</button>
+        <button class="overlay-btn wish" onclick="toggleWish(this)">♡</button>
+      </div>
+    </div>
+    <div class="product-info">
+      <div class="product-cat">Accessories</div>
+      <div class="product-name">Cobalt Mini Bag</div>
+      <div class="product-footer">
+        <div><span class="product-price">€185</span></div>
+        <div class="product-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card p3 fade-in" data-cat="home" data-price="95">
+    <div class="product-img-wrap">
+      <img src="images/product3.jpg" alt="Ember Ceramic Vase">
+      <span class="product-badge sale">-30%</span>
+      <div class="product-overlay">
+        <button class="overlay-btn" onclick="addToCart(2)">Add to Cart</button>
+        <button class="overlay-btn wish" onclick="toggleWish(this)">♡</button>
+      </div>
+    </div>
+    <div class="product-info">
+      <div class="product-cat">Home</div>
+      <div class="product-name">Ember Ceramic Vase</div>
+      <div class="product-footer">
+        <div><span class="product-price">€95</span><span class="product-price-old">€135</span></div>
+        <div class="product-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star empty"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card p4 fade-in" data-cat="home" data-price="240">
+    <div class="product-img-wrap">
+      <img src="images/product4.jpg" alt="Sage Table Lamp">
+      <span class="product-badge new">New</span>
+      <div class="product-overlay">
+        <button class="overlay-btn" onclick="addToCart(3)">Add to Cart</button>
+        <button class="overlay-btn wish" onclick="toggleWish(this)">♡</button>
+      </div>
+    </div>
+    <div class="product-info">
+      <div class="product-cat">Home</div>
+      <div class="product-name">Sage Table Lamp</div>
+      <div class="product-footer">
+        <div><span class="product-price">€240</span></div>
+        <div class="product-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card p5 fade-in" data-cat="accessories" data-price="420">
+    <div class="product-img-wrap">
+      <img src="images/product5.jpg" alt="Dusk Wrist Watch">
+      <div class="product-overlay">
+        <button class="overlay-btn" onclick="addToCart(4)">Add to Cart</button>
+        <button class="overlay-btn wish" onclick="toggleWish(this)">♡</button>
+      </div>
+    </div>
+    <div class="product-info">
+      <div class="product-cat">Accessories</div>
+      <div class="product-name">Dusk Wrist Watch</div>
+      <div class="product-footer">
+        <div><span class="product-price">€420</span></div>
+        <div class="product-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star empty"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card p6 fade-in" data-cat="fashion" data-price="155">
+    <div class="product-img-wrap">
+      <img src="images/product6.jpg" alt="Mist Silk Dress">
+      <span class="product-badge sale">-20%</span>
+      <div class="product-overlay">
+        <button class="overlay-btn" onclick="addToCart(5)">Add to Cart</button>
+        <button class="overlay-btn wish" onclick="toggleWish(this)">♡</button>
+      </div>
+    </div>
+    <div class="product-info">
+      <div class="product-cat">Fashion</div>
+      <div class="product-name">Mist Silk Dress</div>
+      <div class="product-footer">
+        <div><span class="product-price">€155</span><span class="product-price-old">€195</span></div>
+        <div class="product-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FEATURED -->
+<div id="featured" class="featured fade-in">
+  <div class="featured-img">
+    <div class="featured-big-shape"></div>
+  </div>
+  <div class="featured-content">
+    <div class="featured-tag">∎ Limited Edition</div>
+    <h2 class="featured-title">The <em>Gold</em><br>Archive<br>Collection</h2>
+    <p class="featured-desc">Μια επιμελημένη συλλογή από σπάνια αντικείμενα. Κάθε κομμάτι φέρει πιστοποιητικό αυθεντικότητας και αριθμείται χειροκίνητα.</p>
+    <div class="featured-stats">
+      <div>
+        <div class="featured-stat-num">24</div>
+        <div class="featured-stat-label">Μοναδικά Κομμάτια</div>
+      </div>
+      <div>
+        <div class="featured-stat-num">6</div>
+        <div class="featured-stat-label">Designers</div>
+      </div>
+      <div>
+        <div class="featured-stat-num">∞</div>
+        <div class="featured-stat-label">Αξία</div>
+      </div>
+    </div>
+    <button class="btn-gold" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Δείτε τη Συλλογή</button>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <div class="cart-title">Καλάθι</div>
+    <button class="cart-close" onclick="toggleCart()">×</button>
+  </div>
+  <div class="cart-items" id="cart-items">
+    <div class="cart-empty" id="cart-empty">
+      <div class="cart-empty-icon">◯</div>
+      <p>Το καλάθι σας είναι κενό</p>
+    </div>
+  </div>
+  <div class="cart-footer" id="cart-footer" style="display:none">
+    <div class="cart-subtotal">
+      <span class="cart-subtotal-label">Σύνολο</span>
+      <span class="cart-subtotal-price" id="cart-total">€0</span>
+    </div>
+    <button class="cart-checkout" id="checkout-btn" onclick="checkout()">
+      Ολοκλήρωση Αγοράς →
+    </button>
+    <button class="cart-continue" onclick="toggleCart()">Συνέχεια Αγορών</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+<div id="footer-placeholder"></div>
+<script src="script-e-commerce1.js"></script>
+</body>
+</html>

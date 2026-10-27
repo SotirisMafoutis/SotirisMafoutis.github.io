@@ -7,7 +7,9 @@
     <link rel="icon" type="image/png" href="images/Sotiris_logo.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="viewwork.css"> </head>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="viewwork.css"> 
+</head>
 <body>
 
     <div id="header-placeholder"></div>
@@ -22,20 +24,42 @@
             </div>
         </div>
         <div class="scroll-indicator" onclick="document.getElementById('my-work').scrollIntoView({behavior: 'smooth'})">
-    <span>Explore</span>
-    <div class="mouse">
-        <div class="wheel"></div>
-    </div>
-    <div class="arrow">
-        <span></span>
-        <span></span>
-    </div>
-</div>
+            <span>Explore</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </section>
 
     <section class="projects-section" id="my-work">
         <div class="projects-grid">
             
+            <!-- Katharsis Tattoo Studio Project -->
+<div class="project-card">
+    <div class="project-img-wrapper">
+        <img src="images/katharsis.png" alt="Katharsis Tattoo Athens">
+        <a href="https://www.katharsistattooathens.gr/" target="_blank" rel="noopener noreferrer" class="project-hover-overlay">
+            <span class="view-link">View Live <i class="fas fa-external-link-alt"></i></span>
+        </a>
+    </div>
+    <div class="project-details">
+        <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>TypeScript</span>
+            <span>Next.js</span>
+        </div>
+        <h3>Katharsis Tattoo Athens</h3>
+        <p>Σύγχρονη & ατμοσφαιρική ιστοσελίδα για tattoo studio στην Αθήνα, με πλήρη παρουσίαση των υπηρεσιών, portfolio και φόρμα επικοινωνία.</p>
+        <a href="https://www.katharsistattooathens.gr/" target="_blank" rel="noopener noreferrer" class="btn-project">Open Demo</a>
+    </div>
+</div>
+
+            <!-- E-Commerce Interface -->
             <div class="project-card">
                 <div class="project-img-wrapper">
                     <img src="images/underConstruction.jpg" alt="Project 1">
@@ -56,6 +80,7 @@
                 </div>
             </div>
 
+            <!-- Business Landing Page -->
             <div class="project-card">
                 <div class="project-img-wrapper">
                     <img src="images/LandingPage.png" alt="Project 2">
@@ -72,7 +97,7 @@
                     </div>
                     <h3>Business Landing Page</h3>
                     <p>Μινιμαλιστική σελίδα για εταιρική παρουσίαση.</p>
-                    <a href="IndexLanding/indexLanding.html" target="_blank" class="btn-project">Open Demo</a>
+                    <a href="IndexLanding/indexLanding.html" target="_blank" rel="noopener noreferrer" class="btn-project">Open Demo</a>
                 </div>
             </div>
 
